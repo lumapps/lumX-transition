@@ -1,0 +1,42 @@
+<div class="page bgc-white">
+    <p class="mt++">
+        This page is managed with classes. lumx-transition make some classes available, but you can make your own. To use classes, put them in the options:
+    </p>
+    <p class="code-example mt++">
+$stateProvider.state("class", {
+    url: "/class",
+    templateUrl: 'class/class.html',
+    controller: 'ClassCtrl',
+    lumx: {
+        enter: {
+            options: {
+                duration: 500,
+                easing: 'easeInOutCirc',
+                classes: 'lumx-transition--scale-up'
+            }
+        },
+        leave: {
+            options: {
+                duration: 500,
+                easing: 'easeInOutCirc',
+                classes: 'lumx-transition--scale-down'
+            }
+        }
+    }
+});
+    </p>
+    <div class="notification notification--has-icon notification--yellow notification--inline mt++">
+        <i class="notification__icon mdi mdi-alert"></i>
+        <span class="notification__content">
+            Remember the order of the classes is important, and the style you might have applied directly to the element will prevail.
+        </span>
+    </div>
+    <p class="mt++">
+        List of classes available in lumx-transition:
+    </p>
+    <div>
+        <div ng-repeat="class in classes" class="card mt mr+" style="display: inline-block;">
+            <div class="p+">{{ class }}</div>
+        </div>
+    </div>
+</div>

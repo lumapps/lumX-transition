@@ -1,0 +1,48 @@
+<div class="page bgc-white">
+    <p class="mt++">
+        This page is managed with custom transitions. For now, it's only available when used with Velocity. <span class="bgc-blue-50">start</span> will be used with Velocity to initialize the position before launching the transition with <span class="bgc-blue-50">end</span>.
+        To use custom transitions, create a <span class="bgc-blue-50">start</span> and <span class="bgc-blue-50">end</span> key:
+    </p>
+    <p class="code-example mt++">
+$stateProvider.state("custom", {
+    url: "/custom",
+    templateUrl: 'custom/custom.html',
+    controller: 'CustomCtrl',
+    lumx: {
+        enter: {
+            start: {
+                translateX: "100%",
+                translateZ: "0"
+            },
+            end: {
+                translateX: "0",
+                translateZ: "0"
+            },
+            options: {
+                duration: 500,
+                easing: 'easeInOutCirc',
+                type: 'velocity'
+            }
+        },
+        leave: {
+            start: {
+                translateX: "0",
+                translateZ: "0"
+            },
+            end: {
+                translateX: "100%",
+                translateZ: "0"
+            },
+            options: {
+                duration: 500,
+                easing: 'easeInOutCirc',
+                type: 'velocity'
+            }
+        }
+    }
+});
+    </p>
+    <p class="mt++">
+        Please refer to the <a href="http://julian.com/research/velocity/">Velocity documentation</a> to see all the possibilities.
+    </p>
+</div>

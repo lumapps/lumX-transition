@@ -1,0 +1,159 @@
+@import "bower_components/bourbon/app/assets/stylesheets/bourbon";
+
+
+
+
+
+.lx-transition-enter {
+    z-index: 1;
+}
+
+
+
+
+
+.lx-transition--to-left {
+    @include animation(lxTransitionToLeft both);
+}
+.lx-transition--from-left {
+    @include animation(lxTransitionFromLeft both);
+}
+
+.lx-transition--to-right {
+    @include animation(lxTransitionToRight both);
+}
+.lx-transition--from-right {
+    @include animation(lxTransitionFromRight both);
+}
+
+.lx-transition--to-top {
+    @include animation(lxTransitionToTop both);
+}
+.lx-transition--from-top {
+    @include animation(lxTransitionFromTop both);
+}
+
+.lx-transition--to-bottom {
+    @include animation(lxTransitionToBottom both);
+}
+.lx-transition--from-bottom {
+    @include animation(lxTransitionFromBottom both);
+}
+
+.lx-transition--fade-out {
+    @include animation(lxTransitionFadeOut both);
+}
+.lx-transition--fade-in {
+    @include animation(lxTransitionFadeIn both);
+}
+
+.lx-transition--scale-down {
+    @include animation(lxTransitionScaleDown both);
+}
+.lx-transition--scale-up {
+    @include animation(lxTransitionScaleUp both);
+}
+
+
+
+
+@include keyframes(lxTransitionToLeft) {
+    from {
+        @include transform(translateX(0) translateZ(0));
+    }
+    to {
+        @include transform(translateX(-100%) translateZ(0));
+    }
+}
+@include keyframes(lxTransitionFromLeft) {
+    from {
+        @include transform(translateX(-100%) translateZ(0));
+    }
+    to {
+        @include transform(translateX(0) translateZ(0));
+    }
+}
+@include keyframes(lxTransitionToRight) {
+    from {
+        @include transform(translateX(0) translateZ(0));
+    }
+    to {
+        @include transform(translateX(100%) translateZ(0));
+    }
+}
+@include keyframes(lxTransitionFromRight) {
+    from {
+        @include transform(translateX(100%) translateZ(0));
+    }
+    to {
+        @include transform(translateX(0) translateZ(0));
+    }
+}
+@include keyframes(lxTransitionToTop) {
+    from {
+        @include transform(translateY(0) translateZ(0));
+    }
+    to {
+        @include transform(translateY(-100%) translateZ(0));
+    }
+}
+@include keyframes(lxTransitionFromTop) {
+    from {
+        @include transform(translateY(-100%) translateZ(0));
+    }
+    to {
+        @include transform(translateY(0) translateZ(0));
+    }
+}
+@include keyframes(lxTransitionToBottom) {
+    from {
+        @include transform(translateY(0) translateZ(0));
+    }
+    to {
+        @include transform(translateY(100%) translateZ(0));
+    }
+}
+@include keyframes(lxTransitionFromBottom) {
+    from {
+        @include transform(translateY(100%) translateZ(0));
+    }
+    to {
+        @include transform(translateY(0) translateZ(0));
+    }
+}
+@include keyframes(lxTransitionFadeIn) {
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@include keyframes(lxTransitionFadeOut) {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.3;
+    }
+}
+@include keyframes(lxTransitionScaleDown) {
+    from {
+        @include transform(scale(1));
+        opacity: 1
+    }
+    to {
+        @include transform(scale(0.8));
+        opacity: 0;
+    }
+}
+@include keyframes(lxTransitionScaleUp) {
+    from {
+        @include transform(scale(0.8));
+        opacity: 0;
+    }
+    to {
+        @include transform(scale(1));
+        opacity: 1;
+    }
+}

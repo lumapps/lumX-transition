@@ -1,0 +1,36 @@
+<div class="page bgc-white">
+    <p class="mt++">
+        This page is managed with built-in transitions. To use those, put them in the options:
+    </p>
+    <p class="code-example mt++">
+$stateProvider.state("builtin", {
+    url: "/builtin",
+    templateUrl: 'builtin/builtin.html',
+    controller: 'BuiltinCtrl',
+    lumx: {
+        enter: {
+            options: {
+                duration: 500,
+                easing: 'easeInOutCirc',
+                builtin: 'fromLeft fadeIn'
+            }
+        },
+        leave: {
+            options: {
+                duration: 500,
+                easing: 'easeInOutCirc',
+                builtin: 'toLeft fadeOut'
+            }
+        }
+    }
+});
+    </p>
+    <p class="mt++">
+        List of built-in transitions available in lumx-transition:
+    </p>
+    <div>
+        <div ng-repeat="builtin in builtins" class="card mt mr+" style="display: inline-block;">
+            <div class="p+">{{ builtin }}</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<div class="page bgc-white">
+    <div class="mt++ fs-headline text-center">
+        Easy transition for Angular Ui-router.
+    </div>
+    <div flex-container="row" flex-gutter="24" class="mt+++">
+            <div flex-item>
+                <div class="text-center">
+                    <img src="http://ui.lumapps.com/images/feature/angular.png" style="display: inline-block; height: 150px;">
+                </div>
+
+                <div class="p+">
+                    <span class="fs-title tc-black display-block text-center">AngularJS</span>
+
+                    <div class="paragraph fs-body-1">
+                        <p>
+                            AngularJS is what HTML would have been, had it been designed for building web-apps.
+                            Declarative templates with data-binding, MVW, MVVM, MVC, dependency injection and great
+                            testability story all implemented with pure client-side JavaScript!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div flex-item>
+                <div class="text-center">
+                    <img src="https://angular-ui.github.io/logo/UI_Shield.png" style="display: inline-block; height: 150px;">
+                </div>
+
+                <div class="p+">
+                    <span class="fs-title tc-black display-block text-center">UI-Router</span>
+
+                    <div class="paragraph fs-body-1">
+                        <p>
+                            AngularUI Router is a routing framework for AngularJS, which allows you to organize the
+                            parts of your interface into a state machine. Unlike the $route service in the Angular
+                            ngRoute module, which is organized around URL routes, UI-Router is organized around states,
+                            which may optionally have routes, as well as other behavior, attached.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div flex-item>
+                <div class="text-center">
+                    <img src="http://developerlight.com/wp-content/uploads/2014/06/velocityjs.jpg" style="display: inline-block; height: 150px;">
+                </div>
+
+                <div class="p+">
+                    <span class="fs-title tc-black display-block text-center">Velocity JS</span>
+
+                    <div class="paragraph fs-body-1">
+                        <p>
+                            Velocity is an animation engine with the same API as jQuery's $.animate(). It works with
+                            and without jQuery. It's incredibly fast, and it features color animation, transforms,
+                            loops, easings, SVG support, and scrolling. It is the best of jQuery and CSS transitions combined.
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <p class="mt++">
+        For each state you define, just add lumx to your state data:
+    </p>
+    <p class="code-example mt++">
+$stateProvider.state("myState", {
+    url: "/mystate",
+    templateUrl: 'views/mystate.html',
+    controller: 'MyStateCtrl',
+    lumx: {
+        enter: {
+            start: {
+                <a href="/custom">See custom transitions</a>
+            },
+            end: {
+                <a href="/custom">See custom transitions</a>
+            },
+            options: {
+                duration: 500,
+                easing: 'easeInOutCirc',
+                type: 'velocity', // Or remove this to use pure CSS transitions
+                builtin: <a href="/builtin">See built-in transitions</a>,
+                classes: <a href="/class">See classes</a>
+            }
+        },
+        leave: {
+            start: {
+                <a href="/custom">See custom transitions</a>
+            },
+            end: {
+                <a href="/custom">See custom transitions</a>
+            },
+            options: {
+                duration: 500,
+                easing: 'easeInOutCirc',
+                builtin: <a href="/builtin">See built-in transitions</a>,
+                classes: <a href="/class">See classes</a>
+            }
+        }
+    }
+});
+    </p>
+    <p class="mt++">
+        List of easings available in lumx-transition:
+    </p>
+    <div>
+        <div ng-repeat="easing in easings" class="card mt mr+" style="display: inline-block;">
+            <div class="p+">{{ easing }}</div>
+        </div>
+    </div>
+</div>

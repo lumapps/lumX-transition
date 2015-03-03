@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+    <head>
+        <title>LumX Transition</title>
+        <!-- Bootstrap CSS -->
+        <link href="bower_components/mdi/css/materialdesignicons.min.css" rel="stylesheet">
+        <link href="bower_components/lumx/dist/lumx.css" rel="stylesheet">
+        <link href="lumx-transition.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="toolbar bgc-blue-500 site-toolbar">
+            <span class="toolbar__label fs-title">
+                <a href="#/" class="btn btn--l btn--white btn--flat" lx-ripple>
+                    Lumx Transition
+                </a>
+                <a href="#/class" class="btn btn--l btn--white btn--flat" lx-ripple>Class</a>
+                <a href="#/builtin" class="btn btn--l btn--white btn--flat" lx-ripple>Built-ins</a>
+                <a href="#/custom" class="btn btn--l btn--white btn--flat" lx-ripple>Custom transition</a>
+            </span>
+        </div>
+
+        <div class="container">
+            <div class="main lx-transition" ui-view></div>
+        </div>
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/lumx/dist/lumx.js"></script>
+        <script src="bower_components/velocity/velocity.min.js"></script>
+
+        <script src="lumx-transition.js"></script>
+
+        <!-- App -->
+        <script src="general/general.js"></script>
+        <script src="class/class.js"></script>
+        <script src="builtin/builtin.js"></script>
+        <script src="custom/custom.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+</html>

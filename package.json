@@ -1,0 +1,11 @@
+{
+  "name": "lumx-animation",
+  "version": "1.0.0",
+  "description": "Animation handler for ui-router by the LumX team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

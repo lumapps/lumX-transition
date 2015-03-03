@@ -1,0 +1,53 @@
+html, body {
+    height: 100%;
+}
+
+.site-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 64px;
+}
+
+.page {
+    height: 100%;
+    padding: 12px 24px;
+    overflow: auto;
+}
+
+.code-example {
+    white-space: pre;
+    padding: 12px;
+    background-color: #f8f8f8;
+    font-family: monospace;
+    font-size: 1em;
+}
+
+.notification--inline {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
