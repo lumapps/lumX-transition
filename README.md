@@ -5,7 +5,7 @@ Easy transition for Angular Ui-router.
 
 ##Documentation
 
-[Documentation site](https://github.com/DevAndyLee/Angular-Hero-Sample)
+[Documentation site](http://lumapps.github.io/lumX-transition/)
 
 ###Install with Bower
 
