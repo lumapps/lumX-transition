@@ -27,10 +27,10 @@
   },
   "main": [
     "lumx-transition.css",
-    "lumx-transition.js",,
+    "lumx-transition.js"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/lumapps/lumx-transition.git"
-  },
+  }
 }
